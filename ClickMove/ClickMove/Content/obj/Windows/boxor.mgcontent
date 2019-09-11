@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/K018A1462_seisaku/monogame/Test/ClickMove/ClickMove/Content/boxor.png</SourceFile>
-  <SourceTime>2018-11-07T15:23:48.5481059+09:00</SourceTime>
-  <DestFile>C:/K018A1462_seisaku/monogame/Test/ClickMove/ClickMove/Content/bin/Windows/boxor.xnb</DestFile>
-  <DestTime>2019-09-11T13:54:34.018255+09:00</DestTime>
+  <SourceFile>C:/K018A1462_seisaku/monogame/Test/Clone/ClickMove/ClickMove/Content/boxor.png</SourceFile>
+  <SourceTime>2019-09-11T19:47:00.0705421+09:00</SourceTime>
+  <DestFile>C:/K018A1462_seisaku/monogame/Test/Clone/ClickMove/ClickMove/Content/bin/Windows/boxor.xnb</DestFile>
+  <DestTime>2019-09-11T19:47:17.973392+09:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-02T00:05:36+09:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

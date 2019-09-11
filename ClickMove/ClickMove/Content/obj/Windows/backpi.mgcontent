@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/K018A1462_seisaku/monogame/Test/ClickMove/ClickMove/Content/backpi.png</SourceFile>
-  <SourceTime>2018-11-07T15:49:39.0533862+09:00</SourceTime>
-  <DestFile>C:/K018A1462_seisaku/monogame/Test/ClickMove/ClickMove/Content/bin/Windows/backpi.xnb</DestFile>
-  <DestTime>2019-09-11T13:54:34.0284212+09:00</DestTime>
+  <SourceFile>C:/K018A1462_seisaku/monogame/Test/Clone/ClickMove/ClickMove/Content/backpi.png</SourceFile>
+  <SourceTime>2019-09-11T19:47:00.0643912+09:00</SourceTime>
+  <DestFile>C:/K018A1462_seisaku/monogame/Test/Clone/ClickMove/ClickMove/Content/bin/Windows/backpi.xnb</DestFile>
+  <DestTime>2019-09-11T19:47:17.9863566+09:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-02T00:05:36+09:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

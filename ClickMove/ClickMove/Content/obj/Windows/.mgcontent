@@ -4,9 +4,9 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/K018A1462_seisaku/monogame/Test/ClickMove/ClickMove/Content/boxor.png</File>
-    <File>C:/K018A1462_seisaku/monogame/Test/ClickMove/ClickMove/Content/backpi.png</File>
-    <File>C:/K018A1462_seisaku/monogame/Test/ClickMove/ClickMove/Content/Ice.png</File>
-    <File>C:/K018A1462_seisaku/monogame/Test/ClickMove/ClickMove/Content/wallgr.png</File>
+    <File>C:/K018A1462_seisaku/monogame/Test/Clone/ClickMove/ClickMove/Content/boxor.png</File>
+    <File>C:/K018A1462_seisaku/monogame/Test/Clone/ClickMove/ClickMove/Content/backpi.png</File>
+    <File>C:/K018A1462_seisaku/monogame/Test/Clone/ClickMove/ClickMove/Content/Ice.png</File>
+    <File>C:/K018A1462_seisaku/monogame/Test/Clone/ClickMove/ClickMove/Content/wallgr.png</File>
   </SourceFiles>
 </SourceFileCollection>
