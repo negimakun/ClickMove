@@ -25,11 +25,11 @@ namespace ClickMove
         Vector2 clickPosition;
         Vector2 movePosition;
         Vector2 rendPos;
+        Vector2 limit;
 
         bool clickFlag = false;
-
-        int time;
-
+        float time;
+        
         /// <summary>
         /// コンストラクタ
         /// （new で実体生成された際、一番最初に一回呼び出される）
@@ -54,9 +54,7 @@ namespace ClickMove
         protected override void Initialize()
         {
             // この下にロジックを記述
-
-            time = 60;
-
+            
             // この上にロジックを記述
             base.Initialize();// 親クラスの初期化処理呼び出し。絶対に消すな！！
         }
@@ -121,18 +119,32 @@ namespace ClickMove
                 {
                     mousePosition = new Vector2((int)(Input.MousePosition.X / 32)/*何マス目か*/ * 32, (int)(Input.MousePosition.Y / 32) * 32);
                     clickFlag = false;
+                    limit = new Vector2((int)(mousePosition.X - clickPosition.X) / 32, (int)(mousePosition.Y - clickPosition.Y) / 32);
+                    if (limit.X < 0) limit.X++;
+                    if (limit.Y < 0) limit.Y++;
+                    if (Math.Abs(limit.X) < Math.Abs(limit.Y)) time = 60 / 10 * Math.Abs(limit.Y);
+                    else time = 60 / 10 * Math.Abs(limit.X);
                 }
             }
             
             if (rendPos != mousePosition && !clickFlag)
             {
-                movePosition += new Vector2((mousePosition.X - clickPosition.X)/*何マス離れてるか*/ / (time/*60f×秒数*/),
-                    (mousePosition.Y - clickPosition.Y) / (time/*×秒数*/));
+                if (Math.Abs(limit.X) >= Math.Abs((movePosition.X / 32) - (clickPosition.X / 32)))
+                {
+                    //時間 ＝ フレーム　一マス辺りの時間　移動マス
+                    //time = 60 /2 * Math.Abs(limit.X);
+                    movePosition += new Vector2((mousePosition.X - clickPosition.X)/*何マス離れてるか*/ / (time/*60f×秒数*/), 0);
+                }
+                if (Math.Abs(limit.Y) >= Math.Abs((movePosition.Y / 32) - (clickPosition.Y / 32)))
+                {
+                    //時間 ＝ フレーム　一マス辺りの時間　移動マス
+                    //time = 60 /2 * Math.Abs(limit.Y);
+                    movePosition += new Vector2(0, (mousePosition.Y - clickPosition.Y) / (time/*×秒数*/));
+                }
 
                 rendPos = new Vector2((int)(movePosition.X / 32) * 32, (int)(movePosition.Y / 32) * 32);
             }
-
-            Console.WriteLine(clickPosition +":" + mousePosition + ":" + movePosition + ":" + rendPos);
+            Console.WriteLine((movePosition.Y / 32) - (clickPosition.Y / 32));
             
             // この上にロジックを記述
             base.Update(gameTime); // 親クラスの更新処理呼び出し。絶対に消すな！！
